@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <link rel="stylesheet" href="1.1_css.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Test</title>
+</head>
+<body>
+    <h1 style="color:plum" ; style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+      Welcome to my Website 
+        </h1 >
+       <h2 style="font-size: larger;font-style: oblique;font-family: Verdana, Geneva, Tahoma, sans-serif;color: blueviolet;align-content: center;">
+    Hello there 
+
+    </h2>
+    <p style="color: rebeccapurple;">
+      AZ HUGS NON PROFIT WEBSITE
+    </p>    
+    <p style="font-style: italic;font: size 22px;font-weight: 200;color:cadetblue;"> 
+     <!-- shortcut for comments ctrl + / -->
+        <!--this is a link and renamed as here   -->
+        Click <a href="https://davidloadingexperi.wixsite.com/az-hugs/menu"> Here </a> to see a bento style website 
+  </p>
+  <script language="javascript" type = "text/javascript">
+  
+   document.write("Simple Craps")
+   var die1 = Math.floor(Math.random()*6)
+   var die2 = Math.floor(Math.random()*6)
+   var sum = die1 + die2 
+   document.write("</br>")
+   document.write("Die 1 = " + die1)
+   document.write("</br>")
+   document.write("Die 2 = " + die2)
+   document.write("</br>")
+   document.write("Sum = " + sum)
+   document.write("</br>")
+    if (sum == 7 || sum == 11) 
+    {
+      document.write("CRAPS - you lose")
+      
+    }
+    else if (die1 == die2 && die1%2 == 0 )
+    {
+      
+      document.write("DOUBLES - you win")
+      document.write("</br>")
+    }
+     
+
+  </script>
+</body>
+</html>
