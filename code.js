@@ -22,7 +22,7 @@ function playCraps(){
      // output the dice rolls to the html page 
      document.getElementById("die1Result").innerHTML = "Die 1 is: " +die1;
      document.getElementById("die2Result").innerHTML = "Die 2 is: " +die2;
-     document.getElementById("crapsResults").innerHTML = "Sum is: " + sum;
+     document.getElementById("crapssum").innerHTML = "Sum is: " + sum;
 
      //let's code the rules of the dice game
      //if the sum is 7 or 11, we lost
