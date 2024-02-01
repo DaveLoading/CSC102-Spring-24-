@@ -1,0 +1,64 @@
+/* this is a comment in css, this is the onl.y style otion for a comment
+this is a multi line comment
+
+The format of  a css style is:
+
+Selector{
+    property:value;
+    property2:value;
+
+}
+
+All of the HTML page content is in the body section, so when we use the body selector, we are changing things for 
+the whole page
+
+we are changing the backgroung color and the text color
+*/
+body{
+    background-color:rgb(181, 220, 255);
+    color: darkslategray;
+}
+
+/* Heading 1, we are to change the font used for the page title, and the text color  */
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: darkgoldenrod;
+
+}
+
+/* style the links */
+nav{
+    height: 60px;
+    width: 200px;
+    float: left;
+    padding: 5px;
+    line-height: 30px;
+}
+
+/* place the footer at the bottom of the page */
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    text-align: center;
+}
+
+/*This is a custom selector - it will only affect an item on the HTML page that has an ID of meme.Image;
+These settings will help with a future assignment  */
+#meme.Image{
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    width: 200px;
+}
+
+/*change the header to be in the center of the page  */
+header{
+    text-align: center;
+}
+
+/* Anchor tag styles - make the hyperlinks look better */
+a{
+    text-decoration: none;
+    color:darkorange;
+}
