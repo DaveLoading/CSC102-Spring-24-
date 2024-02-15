@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W6 Assignment Strings</title>
+    <!-- link the css file -->
+    <link rel="stylesheet" href="main.css">
+<!-- include the code.js file -->
+<script src="code.js"></script>
+</head>
+
+<body>
+    <!-- Set up form that takes user's first and last names adn zip code and then displays a  
+    secret message if they enter their information correctly -->
+    <h1>Welcome to My Login Page!</h1>
+    <h2>Please enter your information to see a secret message.</h2>
+
+    <form method="post" onsubmit="return validateForm();" >
+       <!-- get user's first name -->
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <!-- get user's last name -->
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+       <!-- get user's zip -->
+        <label for="zip">Zip Code:</label>
+        <input type="text" id="zip" name="zip"><br><br>
+        <!-- here is the submit button so the form can be processed -->
+        <input type="submit" value="Submit">
+    </form>
+    <!-- <script> 
+        //this function will validate the form input to make sure it meets the criteria
+        function validateForm(){
+           //get the firat name that the user entered on the form
+            var firstname = document.getElementById("fname").value;
+
+             //get the last name that the user entered on the form
+             var lastname = document.getElementById("lname").value;
+
+             var zipCode = document.getElementById("zip").value;
+
+             console.log("First Name:" + firstname)
+             console.log("Last Name:" + lastname)
+             console.log("Zip Code:" + zipCode)
+             
+             //create a variable to hold firstname + space + lastname
+             var fullName = firstname + " " + lastname;
+             console.log("Full Name:" + fullName)
+             
+             //do the input validation
+             //we will check for more than 20 letters in the first and last names
+             //or if no names were entered, the length will be 1 because of the space we add between 
+             //first and last name
+             if(fullName.length > 20 || fullName.length == 1){
+                console.log("Invalid name");
+                // let the user know that they did not enter the information in correct;y 
+                alert("Please enter a name that is shorter than 20 letters")
+                // make sure the form does not submit
+                return false;
+            }
+             else if (zipCode.length !=5){
+                console.log("Invalid zip code");
+                //let the user know that the zip code was not entered correctly 
+                alert("Zip code was not 5 digits. Please try again")
+                //make sure the form does not submit
+                return false;
+             }
+             else{
+                //they passed validation release the secret code
+                console.log("We are good to go.");
+                alert("Welcome, "+fullName + ". The secret word is validation.");
+                return true
+             }
+            
+        }
+     </script> -->
+</body>
+</html>
