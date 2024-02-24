@@ -45,12 +45,12 @@ footer{
 
 /*This is a custom selector - it will only affect an item on the HTML page that has an ID of meme.Image;
 These settings will help with a future assignment  */
-#meme.Image{
+#memeImage{
     position: absolute;
     left: 25%;
     top: 25%;
     width: 200px;
-}
+} 
 
 /*change the header to be in the center of the page  */
 header{

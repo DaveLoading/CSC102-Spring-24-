@@ -14,6 +14,8 @@ Do not include any content for the user in the head section -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <!-- this titel will appear in the browser tab. Make it short and simple -->
     <title>CSC102 Index</title>
+    <!-- Link the JavaScript file to this page -->
+    <script src="code.js"></script>
 </head>
 <!-- everything we want to show the user in your body section -->
 <body>
@@ -31,11 +33,16 @@ Do not include any content for the user in the head section -->
  <!-- add header text. there should be 1 and only 1 h1 tag on a page -->
     <h1>Welcome to My website</h1>
 
+<!-- This is the button that will start our image moving around -->
+    <input type="button" onclick="startImageMove();" value="Start Moving Image">
 
-<!--this is a paragraph by default there will be spacing before and after 
+<!-- This is the button that will stop our image moving around -->
+    <input type="button" onclick="stopImageMove();" value="Stop Moving Image">
+
+    <!--this is a paragraph by default there will be spacing before and after 
     the p tag  -->
 <p>
-<img id="meme.Image" src="./images/meme.image.png" alt="Meme Image" width="1000">
+<img id="memeImage" src="./images/meme.image.png" alt="Meme Image" width="1000">
 
 </p>
 <!-- Add the footer to the bottom of the page -->
@@ -46,6 +53,7 @@ Do not include any content for the user in the head section -->
     2625 W Baseline Rd. </br>
     Tempe, AZ 85283</br>
 </footer>
+
 
 <!-- make sure the closing body tag is at the bottom of the page -->
 </body>
