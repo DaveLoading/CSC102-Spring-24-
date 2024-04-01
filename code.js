@@ -222,3 +222,48 @@ function palindromeTest(strToTest){
   return strRev == strCleaned;
 
 }
+/* Sound Code */
+function addSound(){
+    // create an audio HTML element in JavaScript that we will add to the HTML page
+    var soundElement = document.createElement("audio");
+
+    // nickname to the play button in the HTML
+    var playButton = document.getElementById("btnPlay");
+    // nickname to the pause button in the HTML
+    var pauseButton = document.getElementById("btnPause");
+
+    //set the attributes for our sound element
+    soundElement.setAttribute("id","mySound");
+    //specify the sound fiel
+    soundElement.setAttribute("src","us-lab-background.mp3");
+    
+   // add the audio player controls
+   soundElement.setAttribute("controls","controls");
+
+    //add the audio HTML element to the page 
+    document.body.appendChild(soundElement);
+    
+    console.log("sound element added to the page.")
+
+    // make the play and pause buttons visisble
+    playButton.hidden = false;
+    pauseButton.hidden = false;
+ }
+
+ //this function runs when the play button is clicked - it plays the sound
+ function playSound(){
+    // pointer to our new sound element 
+    var audio = document.getElementById("mySound");
+      //play the sound
+    audio.play();
+    console.log("sound played");
+
+ }
+  //this function runs when the pause button is clicked - it will stop playing the sound
+  function pauseSound(){
+    // pointer to our new sound element 
+    var audio = document.getElementById("mySound");
+      //pause the sound
+    audio.pause();
+    console.log("sound paused");
+  }
