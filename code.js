@@ -267,3 +267,68 @@ function addSound(){
     audio.pause();
     console.log("sound paused");
   }
+  //////////////// Week 12 lap time recorder code/////////////
+   // this variable will keep track of the current lap
+        //as we add laps, the value wull be increased by 1 
+        var lapCounter = 0;
+
+        //set up an empty array that will hold the lap times
+        var lapsArray = [];
+       
+        // this function will record a lap - add a lap to the lapsArray each time the button is clicked
+        function recordLap(){
+            // use .push to add an item to the end of the array
+            //new Date() will add the current date and time to the array
+            lapsArray.push(new Date());
+
+            //print out the info to the console
+            console.log("Lap" + (lapCounter+1) + "recorded " + lapsArray[lapCounter]);
+
+            //display a message to the user that the lap was recorded
+            // create the shortcut/nickname variable that points the message div
+            var divMsg = document.getElementById("messageDiv");
+
+            //display a message based on which lap is being recorded
+            if (lapCounter ==0 ){
+                divMsg.innerText = "The first lap was recorded"
+            }
+            else if (lapCounter == 1){
+                divMsg.innerText = "The second lap was recorded"
+            }
+            else if (lapCounter == 2){
+                divMsg.innerText = "The third lap was recorded"
+            }
+
+            //catch all else statement - if the counter is greater than 2, prints out a generic message
+            else{
+                divMsg.innerText = "Lap " + (lapCounter+1) + ": was recorded.";
+            }
+            //increase the lap counter by 1 - it is equivilent to saying lapCounter = lapCOunter + 1
+            lapCounter++;
+        }
+
+        // create the function to display the lap times to the user
+        function displayLaps(){
+            // create a variable that is a pointer to the display laps div
+            var divLaps = document.getElementById("lapsDiv");
+
+            // create an unordered list to hold the lap times
+            var u1Laps = document.createElement("u1");
+
+            // add the unordered list to the display laps div
+            divLaps.appendChild(u1Laps)
+
+            //loop through the laps array to add the lap times to the unordered list
+            for (var i = 0; i < lapsArray.length; i++){
+                //create a list item that will be added to the unordered list
+                var liLap = document.createElement("li");
+
+                //add the lap time to the item text
+                liLap.textContent = "Lap: " + (i+1) + ": " + lapsArray[i];
+                
+                //add the list item to the unordered list
+                u1Laps.appendChild(liLap);
+            }
+
+        }
+
