@@ -62,3 +62,18 @@ a{
     text-decoration: none;
     color:darkorange;
 }
+
+
+table{
+    width: 100%;
+    border-collapse: collapse; /* this prevents stacked border lines */
+}
+
+th, td{
+    border: 3px solid whitesmoke;
+    text-align: left;
+    padding: 8px;
+}
+th{
+    background-color: beige;
+}
